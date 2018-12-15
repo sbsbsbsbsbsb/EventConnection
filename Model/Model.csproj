@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>12.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F4EEC2B7-C8C5-4A21-9DEA-7852C7B4E65D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Model</RootNamespace>
+    <AssemblyName>Model</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkProfile>Profile32</TargetFrameworkProfile>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <TargetPlatform Include="WindowsPhoneApp, Version=8.1" />
+    <TargetPlatform Include="Windows, Version=8.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataModel\Enum\VisitorType.cs" />
+    <Compile Include="DataModel\ReviewCollector.cs" />
+    <Compile Include="DataModel\ReviewFinal.cs" />
+    <Compile Include="DataModel\ReviewStepFive.cs" />
+    <Compile Include="DataModel\ReviewStepFour.cs" />
+    <Compile Include="DataModel\ReviewStepOne.cs" />
+    <Compile Include="DataModel\ReviewStepThree.cs" />
+    <Compile Include="DataModel\ReviewStepTwo.cs" />
+    <Compile Include="DataModel\UserInfo.cs" />
+    <Compile Include="DTO\BaseModel.cs" />
+    <Compile Include="DTO\ConferenceModel.cs" />
+    <Compile Include="DTO\Enum\EventType.cs" />
+    <Compile Include="DTO\Enum\StaffType.cs" />
+    <Compile Include="DTO\ErrorModel.cs" />
+    <Compile Include="DTO\MessageModel.cs" />
+    <Compile Include="DTO\EventModel.cs" />
+    <Compile Include="DTO\RatingModel.cs" />
+    <Compile Include="DTO\ResponseModel.cs" />
+    <Compile Include="DTO\QuestionnaireModel.cs" />
+    <Compile Include="DTO\StaffModel.cs" />
+    <Compile Include="DTO\UserModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Runtime\CachedObject.cs" />
+    <Compile Include="Runtime\EventStaffNavigationArgs.cs" />
+    <Compile Include="Runtime\Interfaces\IDataProvider.cs" />
+    <Compile Include="Runtime\Interfaces\IBusinessDataProvider.cs" />
+    <Compile Include="Runtime\Interfaces\IServiceProvider.cs" />
+    <Compile Include="Runtime\Interfaces\IValidationLocalizationService.cs" />
+    <Compile Include="Runtime\Interfaces\IViewModel.cs" />
+    <Compile Include="Runtime\ServiceMethodModel.cs" />
+    <Compile Include="Runtime\EventVotedEventArgs.cs" />
+    <Compile Include="Runtime\StaffVotedEventArgs.cs" />
+    <Compile Include="Runtime\UserUpdatedEventArgs.cs" />
+    <Compile Include="Utils\ModelConverter.cs" />
+    <Compile Include="Utils\ErrorUtil.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="JetBrains.Annotations.PCL328, Version=10.0.0.0, Culture=neutral, PublicKeyToken=1010a0d8d6380325, processorArchitecture=MSIL">
+      <HintPath>..\packages\JetBrains.Annotations.10.0.0\lib\portable-net4+sl5+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1\JetBrains.Annotations.PCL328.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\portable-net45+wp80+win8+wpa81+dnxcore50\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Tools\Tools.csproj">
+      <Project>{0e271758-22ce-4043-8003-72d1003b12f4}</Project>
+      <Name>Tools</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

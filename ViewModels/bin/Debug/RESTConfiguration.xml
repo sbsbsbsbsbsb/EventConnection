@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--Here we put main project settings-->
+<SettingsMainBlock>
+  <!--Array of conference. Temporary.-->
+  <Conferences>
+    <Conference Name="Default" ID="10"/>
+  </Conferences>
+  <!--Array of REST services-->
+  <Sercives>
+    <Service Name="MainService" Url="http://eventconnection.ru/rest">
+      <Methods>
+        <!--/conference/{conferenceId}-->
+        <Method Name="GetConference" PathMask="/conference/{0}" Protocol="GET" />
+        <!--/conference/{conferenceId}/user-->
+        <Method Name="GetConferenceUsers" PathMask="/conference/{0}/user" Protocol="GET"  />
+        <!--/event/{eventId}-->
+        <Method Name="GetEvent" PathMask="/event/{0}" Protocol="GET" />
+        <!--/event/{eventId}/rate-->
+        <Method Name="SetRate" PathMask="/event/{0}/rate" Protocol="PUT" />
+        <!--/event/{eventId}/staff/{staffId}-->
+        <Method Name="SetStaffRate" PathMask="/event/{0}/staff/{1}/rate" Protocol="PUT" />
+        <!--/staff/{staffId}-->
+        <Method Name="GetStaff" PathMask="/staff/{0}" Protocol="GET" />
+        <!--/message/{token}-->
+        <Method Name="GetMessages" PathMask="/message/{0}" Protocol="GET" />
+        <!--/message/{token}-->
+        <Method Name="SendMessage" PathMask="/message/{0}" Protocol="POST" />
+        <!--/user/{id}-->
+        <Method Name="GetUser" PathMask="/user/{0}" Protocol="GET" />
+        <!--/user/{id}-->
+        <Method Name="SetUser" PathMask="/user/{0}" Protocol="PUT" />
+        <!--/user-->
+        <Method Name="AddUser" PathMask="/user" Protocol="POST" />
+        <!--/user/{token}/questionnaire-->
+        <Method Name="AddReview" PathMask="/user/{0}/questionnaire" Protocol="POST" />
+        <!--/user/check/{socialID}-->
+        <Method Name="CheckUser" PathMask="/user/check/{0}" Protocol="GET" />
+        <!--/user/{token}/visit/{conferenceId}-->
+        <Method Name="AddUserToConf" PathMask="/user/{0}/visit/{1}" Protocol="POST" />
+      </Methods>
+    </Service>
+  </Sercives>
+</SettingsMainBlock>

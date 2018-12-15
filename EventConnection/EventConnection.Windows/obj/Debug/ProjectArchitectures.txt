@@ -1,0 +1,7 @@
+D:\tfs\TFS\Interfaces\Interfaces\EventConnection\Core\Core.csproj;neutral
+D:\tfs\TFS\Interfaces\Interfaces\EventConnection\EventConnection\EventConnection.Windows\EventConnection.Windows.csproj;neutral
+D:\tfs\TFS\Interfaces\Interfaces\EventConnection\Model\Model.csproj;neutral
+D:\tfs\TFS\Interfaces\Interfaces\EventConnection\Model\Model.csproj;neutral
+D:\tfs\TFS\Interfaces\Interfaces\EventConnection\Tools\Tools.csproj;neutral
+D:\tfs\TFS\Interfaces\Interfaces\EventConnection\Tools\Tools.csproj;neutral
+D:\tfs\TFS\Interfaces\Interfaces\EventConnection\Tools\Tools.csproj;neutral

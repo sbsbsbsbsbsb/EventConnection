@@ -1,0 +1,90 @@
+﻿<storeApps:VisualStateAwarePage
+    x:Class="EventConnection.Pages.Rating_BestSpeaker"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:EventConnection.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="#ded6bf"
+    xmlns:mvvm="using:Microsoft.Practices.Prism.Mvvm"
+    xmlns:controls="using:EventConnection.Controls"
+    xmlns:storeApps="using:Microsoft.Practices.Prism.StoreApps"
+    mvvm:ViewModelLocator.AutoWireViewModel="true">
+
+    <Grid x:Name="LayoutRoot">
+
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition/>
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="10*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Image Grid.ColumnSpan="3" Source="../Resources/EventConnection_top.png"></Image>
+        <Grid Grid.Column="1" Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="6*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid Row="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0" TextWrapping="Wrap" Style="{ThemeResource GroupHeaderTextBlockStyle}"  Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Top" Padding="7,0" TextAlignment="Center">
+                Шаг 4 из 5
+                </TextBlock>
+                <TextBlock Grid.Row="1" TextWrapping="Wrap" Style="{ThemeResource GroupHeaderTextBlockStyle}"  Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="7,0" TextAlignment="Center" FontWeight="SemiBold" >
+                Выберите секцию, в которой был лучший спикер
+                </TextBlock>
+                <ComboBox Grid.Row="2" PlaceholderText="Секция" Foreground="Black" VerticalAlignment="Top" HorizontalContentAlignment="Center" ItemsSource="{Binding Model.Sections}" DisplayMemberPath="Name" SelectedValuePath="Id" SelectedValue="{Binding Model.SelectedSectionId, 
+                Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"  />
+                <TextBlock Grid.Row="3" TextWrapping="Wrap" Style="{ThemeResource GroupHeaderTextBlockStyle}"  Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="7,0" TextAlignment="Center" FontWeight="SemiBold">
+                Выберите лучшего спикера
+                </TextBlock>
+                <ComboBox Grid.Row="4" PlaceholderText="Участник" Foreground="Black" VerticalAlignment="Top" HorizontalContentAlignment="Center" ItemsSource="{Binding Model.Speakers}" DisplayMemberPath="Name" SelectedValuePath="Id" SelectedValue="{Binding Model.SelectedSpeakerId, 
+                Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"   />
+            </Grid>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" Padding="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Click="GoBack_OnClick" BorderBrush="Transparent" Margin="0">
+                    <Grid HorizontalAlignment="Stretch">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition Width="4*" />
+                        </Grid.ColumnDefinitions>
+                        <Image Source="../Resources/Pix_Back.png"></Image>
+                        <TextBlock Grid.Column="1" Foreground="Black" Style="{ThemeResource GroupHeaderTextBlockStyle}" HorizontalAlignment="Left" Margin="10 0" VerticalAlignment="Center" FontFamily="Segoe WP SemiLight" FontWeight="Bold">Назад</TextBlock>
+                    </Grid>
+                </Button>
+                <Button Grid.Column="1" Padding="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Click="GoNext_OnClick" BorderBrush="Transparent">
+                    <Grid HorizontalAlignment="Stretch" Width="140">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="4*" />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0" Foreground="Black" Style="{ThemeResource GroupHeaderTextBlockStyle}" HorizontalAlignment="Right" Margin="10 0" VerticalAlignment="Center" FontFamily="Segoe WP SemiLight" FontWeight="Bold">Вперед</TextBlock>
+                        <Image Grid.Column="1" Source="../Resources/Pix_Next.png"></Image>
+                    </Grid>
+                </Button>
+            </Grid>
+        </Grid>
+        <controls:MenuControl Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" ExpliciteChatLock="False" ExpliciteEventsLock="False" ExpliciteReviewLock="True" />
+    </Grid>
+</storeApps:VisualStateAwarePage>

@@ -1,0 +1,58 @@
+﻿<UserControl
+    x:Class="EventConnection.Controls.MenuControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400"
+    xmlns:mvvm="using:Microsoft.Practices.Prism.Mvvm"
+    xmlns:context="using:ViewModels.Context"
+    mvvm:ViewModelLocator.AutoWireViewModel="true"
+    d:DataContext="{d:DesignInstance Type=context:MenuControl}">
+
+    <Grid Background="#b28a18">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Button BorderBrush="Transparent" Grid.Column="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Padding="0" MinHeight="5" Margin="0" Click="ToList_OnClick" Opacity="{Binding ListBtnOpacity, 
+                Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" IsEnabled="{Binding IsListEnabled, 
+                Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+            <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Image Grid.Row="0" Source="../Resources/lecturer.png"></Image>
+                <TextBlock Grid.Row="1" Style="{ThemeResource BaseTextBlockStyle}"  Foreground="Black" HorizontalAlignment="Center" FontWeight="Normal">Программа</TextBlock>
+            </Grid>
+        </Button>
+        <Button BorderBrush="Transparent" Grid.Column="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Padding="0" MinHeight="5" Margin="0" Opacity="{Binding ChatBtnOpacity, 
+                Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" IsEnabled="{Binding  IsChatEnabled, 
+                Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Click="ToChat_OnClick">
+            <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Image Grid.Row="0" Source="../Resources/speech.png"></Image>
+                <TextBlock Grid.Row="1" Style="{ThemeResource BaseTextBlockStyle}"  Foreground="Black" HorizontalAlignment="Center" FontWeight="Normal">Участники</TextBlock>
+            </Grid>
+        </Button>
+        <Button BorderBrush="Transparent" Grid.Column="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Padding="0" MinHeight="5" Margin="0" Opacity="{Binding ReviewBtnOpacity, 
+                Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" IsEnabled="{Binding IsReviewEnabled, 
+                Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Click="ToReview_OnClick">
+            <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Image Grid.Row="0" Source="../Resources/professional.png"></Image>
+                <TextBlock Grid.Row="1" Style="{ThemeResource BaseTextBlockStyle}"  Foreground="Black" HorizontalAlignment="Center" FontWeight="Normal">Анкета</TextBlock>
+            </Grid>
+        </Button>
+    </Grid>
+</UserControl>

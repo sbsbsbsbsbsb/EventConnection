@@ -1,0 +1,25 @@
+<XamlCompilerSaveState>
+  <ReferenceAssemblyList>
+    <LocalAssembly PathName="d:\tfs\tfs\interfaces\interfaces\eventconnection\eventconnection\eventconnection.windows\obj\debug\intermediatexaml\eventconnection.windows.exe" HashGuid="dcec8c38-477d-0469-c7bb-6755d2fe811c" />
+    <ReferenceAssembly PathName="d:\tfs\tfs\interfaces\interfaces\eventconnection\core\bin\debug\core.dll" HashGuid="22f19b43-d5c1-a0f2-0836-a73be4d3da4b" />
+    <ReferenceAssembly PathName="d:\tfs\tfs\interfaces\interfaces\eventconnection\packages\jetbrains.annotations.10.0.0\lib\portable-net4+sl4+wp7+netcore45\jetbrains.annotations.pcl1.dll" HashGuid="ede885b1-8035-abf9-8cfc-ebfd4b995f5f" />
+    <ReferenceAssembly PathName="d:\tfs\tfs\interfaces\interfaces\eventconnection\packages\prism.mvvm.1.1.1\lib\windows8\microsoft.practices.prism.mvvm.dll" HashGuid="cbdd458f-3f7b-91dd-175a-6fbe0d8f860e" />
+    <ReferenceAssembly PathName="d:\tfs\tfs\interfaces\interfaces\eventconnection\packages\prism.mvvm.1.1.1\lib\windows8\microsoft.practices.prism.mvvm.store.dll" HashGuid="347692ae-d3bb-41c8-00a0-1222d3d82e87" />
+    <ReferenceAssembly PathName="d:\tfs\tfs\interfaces\interfaces\eventconnection\packages\prism.mvvm.1.1.1\lib\windows8\microsoft.practices.prism.sharedinterfaces.dll" HashGuid="77ddb96d-234e-bbe6-7043-530fe79bc489" />
+    <ReferenceAssembly PathName="d:\tfs\tfs\interfaces\interfaces\eventconnection\packages\prism.storeapps.2.0.0\lib\windows8\microsoft.practices.prism.storeapps.dll" HashGuid="480782f1-e4b6-714d-0927-945a03634ad1" />
+    <ReferenceAssembly PathName="d:\tfs\tfs\interfaces\interfaces\eventconnection\packages\prism.storeapps.2.0.0\lib\windows8\microsoft.practices.prism.storeapps.windows.dll" HashGuid="2427a039-41ae-2589-47fb-f304c758c985" />
+    <ReferenceAssembly PathName="d:\tfs\tfs\interfaces\interfaces\eventconnection\packages\commonservicelocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\microsoft.practices.servicelocation.dll" HashGuid="89de7f80-26d8-a17c-5ad9-b855f81ea5b2" />
+    <ReferenceAssembly PathName="d:\tfs\tfs\interfaces\interfaces\eventconnection\packages\unity.4.0.1\lib\win8\microsoft.practices.unity.dll" HashGuid="c877bd0f-99df-0d61-0e86-1fcd5a709a45" />
+    <ReferenceAssembly PathName="d:\tfs\tfs\interfaces\interfaces\eventconnection\packages\unity.4.0.1\lib\win8\microsoft.practices.unity.registrationbyconvention.dll" HashGuid="d99e49e1-55d1-563f-7f59-5ee85698795a" />
+    <ReferenceAssembly PathName="d:\tfs\tfs\interfaces\interfaces\eventconnection\model\bin\debug\model.dll" HashGuid="3340230d-46e1-0068-8b2d-ad646c21ffdd" />
+    <ReferenceAssembly PathName="d:\tfs\tfs\interfaces\interfaces\eventconnection\packages\prism.core.6.1.0\lib\portable-win+net45+wp80+win81+wpa81+monoandroid10+monotouch10+xamarin.ios10\prism.dll" HashGuid="d5e62627-700c-eea3-c9a9-d32acabf25fb" />
+    <ReferenceAssembly PathName="d:\tfs\tfs\interfaces\interfaces\eventconnection\packages\prism.forms.6.0.0\lib\portable-win+net45+wp80+win81+wpa81+monoandroid10+monotouch10+xamarin.ios10\prism.forms.dll" HashGuid="2d95a92f-0878-8ee4-796b-05f56a144048" />
+    <ReferenceAssembly PathName="d:\tfs\tfs\interfaces\interfaces\eventconnection\packages\prism.unity.6.1.1\lib\portable-win+net45+wp80+win81+wpa81+monoandroid10+monotouch10+xamarin.ios10\prism.unity.forms.dll" HashGuid="dcb99a60-b1bf-663b-ac85-7d305fb88653" />
+    <ReferenceAssembly PathName="d:\tfs\tfs\interfaces\interfaces\eventconnection\tools\bin\debug\tools.dll" HashGuid="c63966f9-1a63-8795-86b0-61369a1d5f07" />
+    <ReferenceAssembly PathName="d:\tfs\tfs\interfaces\interfaces\eventconnection\packages\xamarin.forms.1.5.0.6447\lib\win81\xamarin.forms.core.dll" HashGuid="7fe0beab-73fa-b0ee-7301-cfe87e92912e" />
+    <ReferenceAssembly PathName="d:\tfs\tfs\interfaces\interfaces\eventconnection\packages\xamarin.forms.1.5.0.6447\lib\win81\xamarin.forms.platform.dll" HashGuid="d9389e38-8a39-bed5-406b-7a34fe4704ea" />
+    <ReferenceAssembly PathName="d:\tfs\tfs\interfaces\interfaces\eventconnection\packages\xamarin.forms.1.5.0.6447\lib\win81\xamarin.forms.platform.winrt.dll" HashGuid="7b7bf577-02c9-364a-819f-77143e76c477" />
+    <ReferenceAssembly PathName="d:\tfs\tfs\interfaces\interfaces\eventconnection\packages\xamarin.forms.1.5.0.6447\lib\win81\xamarin.forms.platform.winrt.tablet.dll" HashGuid="a39b29b4-a736-7ef4-f69d-ba9e5ad5ab2a" />
+    <ReferenceAssembly PathName="d:\tfs\tfs\interfaces\interfaces\eventconnection\packages\xamarin.forms.1.5.0.6447\lib\win81\xamarin.forms.xaml.dll" HashGuid="3838ccba-838e-e369-f88c-f21aedc9464f" />
+  </ReferenceAssemblyList>
+</XamlCompilerSaveState>

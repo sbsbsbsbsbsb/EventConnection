@@ -1,0 +1,241 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Prism.Forms</name>
+    </assembly>
+    <members>
+        <member name="P:Prism.Bootstrapper.Logger">
+            <summary>
+            Gets the <see cref="T:Prism.Logging.ILoggerFacade"/> for the application.
+            </summary>
+            <value>A <see cref="T:Prism.Logging.ILoggerFacade"/> instance.</value>
+        </member>
+        <member name="M:Prism.Bootstrapper.Run(Xamarin.Forms.Application)">
+            <summary>
+            Runs the bootstrapper process.
+            </summary>
+        </member>
+        <member name="M:Prism.Bootstrapper.CreateLogger">
+            <summary>
+            Create the <see cref="T:Prism.Logging.ILoggerFacade" /> used by the bootstrapper.
+            </summary>
+            <remarks>
+            The base implementation returns a new TextLogger.
+            </remarks>
+        </member>
+        <member name="M:Prism.Bootstrapper.ConfigureServiceLocator">
+            <summary>
+            Configures the LocatorProvider for the <see cref="T:Microsoft.Practices.ServiceLocation.ServiceLocator" />.
+            </summary>
+        </member>
+        <member name="M:Prism.Mvvm.ViewModelLocator.Bind(System.Object,System.Object)">
+            <summary>
+            Sets the DataContext of a View
+            </summary>
+            <param name="view">The View to set the DataContext on</param>
+            <param name="viewModel">The object to use as the DataContext for the View</param>
+        </member>
+        <member name="T:Prism.Navigation.INavigationPageProvider">
+            <summary>
+            Defines the methods required to implement a page provider while navigating to a Page.
+            </summary>
+            <remarks>The class that implements this interface should be used with the NavigationPageProviderAttribute. 
+            The term NavigationPage in this interface name is not related to the Xamarin.Forms.NavigationPage class.
+            The term NavigationPage refers to a different page type which may wrap, or replace, the current target page during navigation.
+            </remarks>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Prism.Navigation.INavigationPageProvider.CreatePageForNavigation(Xamarin.Forms.Page,Xamarin.Forms.Page)" -->
+        <member name="T:Prism.Navigation.NavigationPageProviderAttribute">
+            <summary>
+            Specifies the INavigationPageProvider to use while navigating to the decorated Page.
+            </summary>
+        </member>
+        <member name="P:Prism.Navigation.NavigationPageProviderAttribute.Type">
+            <summary>
+            The type that implements the INavigationPageProvider interface
+            </summary>
+        </member>
+        <member name="M:Prism.Navigation.NavigationParameters.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Prism.Navigation.NavigationParameters"/> class.
+            </summary>
+        </member>
+        <member name="M:Prism.Navigation.NavigationParameters.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Prism.Navigation.NavigationParameters"/> class with a query string.
+            </summary>
+            <param name="query">The query string.</param>
+        </member>
+        <member name="M:Prism.Navigation.NavigationParameters.ToString">
+            <summary>
+            Converts the list of key value pairs to a query string.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Prism.Services.ActionSheetButton.IsDestroy">
+            <summary>
+            The button will be used as destroy
+            </summary>
+        </member>
+        <member name="P:Prism.Services.ActionSheetButton.IsCancel">
+            <summary>
+            The button will be used as cancel
+            </summary>
+        </member>
+        <member name="P:Prism.Services.ActionSheetButton.Text">
+            <summary>
+            Text to display in the action sheet
+            </summary>
+        </member>
+        <member name="P:Prism.Services.ActionSheetButton.Command">
+            <summary>
+            Command to execute when button is pressed
+            </summary>
+        </member>
+        <member name="M:Prism.Services.ActionSheetButton.CreateCancelButton(System.String,System.Windows.Input.ICommand)">
+            <summary>
+            Create a new instance of <see cref="T:Prism.Services.ActionSheetButton"/> that display as "other button"
+            </summary>
+            <param name="text">Button text</param>
+            <param name="callback">Callback when button pressed</param>
+            <returns>An instance of <see cref="T:Prism.Services.ActionSheetButton"/></returns>
+        </member>
+        <member name="M:Prism.Services.ActionSheetButton.CreateDestroyButton(System.String,System.Windows.Input.ICommand)">
+            <summary>
+            Create a new instance of <see cref="T:Prism.Services.ActionSheetButton"/> that display as "destroy button"
+            </summary>
+            <param name="text">Button text</param>
+            <param name="callback">Callback when button pressed</param>
+            <returns>An instance of <see cref="T:Prism.Services.ActionSheetButton"/></returns>
+        </member>
+        <member name="M:Prism.Services.ActionSheetButton.CreateButton(System.String,System.Windows.Input.ICommand)">
+            <summary>
+            Create a new instance of <see cref="T:Prism.Services.ActionSheetButton"/> that display as "cancel button"
+            </summary>
+            <param name="text"></param>
+            <param name="callback"></param>
+            <returns>An instance of <see cref="T:Prism.Services.ActionSheetButton"/></returns>
+        </member>
+        <member name="T:Prism.Services.IActionSheetButton">
+            <summary>
+            Convenient contract to enable executing commands directly when using <see cref="M:Prism.Services.IPageDialogService.DisplayActionSheet(System.String,System.String,System.String,System.String[])"/>
+            </summary>
+        </member>
+        <member name="P:Prism.Services.IActionSheetButton.IsDestroy">
+            <summary>
+            The button will be used as destroy
+            </summary>
+        </member>
+        <member name="P:Prism.Services.IActionSheetButton.IsCancel">
+            <summary>
+            The button will be used as cancel
+            </summary>
+        </member>
+        <member name="P:Prism.Services.IActionSheetButton.Text">
+            <summary>
+            Text to display in the action sheet
+            </summary>
+        </member>
+        <member name="P:Prism.Services.IActionSheetButton.Command">
+            <summary>
+            Command to execute when button is pressed
+            </summary>
+        </member>
+        <member name="M:Prism.Services.IPageDialogService.DisplayAlert(System.String,System.String,System.String,System.String)">
+            <summary>
+            Presents an alert dialog to the application user with an accept and a cancel button.
+            </summary>
+            <para>
+            The <paramref name="message"/> can be empty.
+            </para>
+            <param name="title">Title to display.</param>
+            <param name="message">Message to display.</param>
+            <param name="acceptButton">Text for the accept button.</param>
+            <param name="cancelButton">Text for the cancel button.</param>
+            <returns><c>true</c> if non-destructive button pressed; otherwise <c>false</c>/></returns>
+        </member>
+        <member name="M:Prism.Services.IPageDialogService.DisplayAlert(System.String,System.String,System.String)">
+            <summary>
+            Presents an alert dialog to the application user with a single cancel button.
+            </summary>
+            <para>
+            The <paramref name="message"/> can be empty.
+            </para>
+            <param name="title">Title to display.</param>
+            <param name="message">Message to display.</param>
+            <param name="cancelButton">Text for the cancel button.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Prism.Services.IPageDialogService.DisplayActionSheet(System.String,System.String,System.String,System.String[])">
+            <summary>
+            Displays a native platform action sheet, allowing the application user to choose from serveral buttons.
+            </summary>
+            <param name="title">Title to display in view.</param>
+            <param name="cancelButton">Text for the cancel button.</param>
+            <param name="destroyButton">Text for the ok button.</param>
+            <param name="otherButtons">Text for other buttons.</param>
+            <returns>Text for the pressed button</returns>
+        </member>
+        <member name="M:Prism.Services.IPageDialogService.DisplayActionSheet(System.String,Prism.Services.IActionSheetButton[])">
+            <summary>
+            Displays a native platform action sheet, allowing the application user to choose from serveral buttons.
+            </summary>
+            <para>
+            The text displayed in the action sheet will be the value for <see cref="P:Prism.Services.IActionSheetButton.Text"/> and when pressed
+            the <see cref="!:IActionSheetButton.Callback"/> will be executed.
+            </para>
+            <param name="service">Instance of <see cref="T:Prism.Services.IPageDialogService"/></param>
+            <param name="title">Text to display in action sheet</param>
+            <param name="buttons">Buttons displayed in action sheet</param>
+            <returns></returns>
+        </member>
+        <member name="M:Prism.Services.PageDialogService.DisplayAlert(System.String,System.String,System.String,System.String)">
+            <summary>
+            Presents an alert dialog to the application user with an accept and a cancel button.
+            </summary>
+            <para>
+            The <paramref name="message"/> can be empty.
+            </para>
+            <param name="title">Title to display.</param>
+            <param name="message">Message to display.</param>
+            <param name="acceptButton">Text for the accept button.</param>
+            <param name="cancelButton">Text for the cancel button.</param>
+            <returns><c>true</c> if non-destructive button pressed; otherwise <c>false</c>/></returns>
+        </member>
+        <member name="M:Prism.Services.PageDialogService.DisplayAlert(System.String,System.String,System.String)">
+            <summary>
+            Presents an alert dialog to the application user with a single cancel button.
+            </summary>
+            <para>
+            The <paramref name="message"/> can be empty.
+            </para>
+            <param name="title">Title to display.</param>
+            <param name="message">Message to display.</param>
+            <param name="cancelButton">Text for the cancel button.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Prism.Services.PageDialogService.DisplayActionSheet(System.String,System.String,System.String,System.String[])">
+            <summary>
+            Displays a native platform action sheet, allowing the application user to choose from serveral buttons.
+            </summary>
+            <param name="title">Title to display in view.</param>
+            <param name="cancelButton">Text for the cancel button.</param>
+            <param name="destroyButton">Text for the ok button.</param>
+            <param name="otherButtons">Text for other buttons.</param>
+            <returns>Text for the pressed button</returns>
+        </member>
+        <member name="M:Prism.Services.PageDialogService.DisplayActionSheet(System.String,Prism.Services.IActionSheetButton[])">
+            <summary>
+            Displays a native platform action sheet, allowing the application user to choose from serveral buttons.
+            </summary>
+            <para>
+            The text displayed in the action sheet will be the value for <see cref="P:Prism.Services.IActionSheetButton.Text"/> and when pressed
+            the <see cref="!:IActionSheetButton.Callback"/> will be executed.
+            </para>
+            <param name="service">Instance of <see cref="T:Prism.Services.IPageDialogService"/></param>
+            <param name="title">Text to display in action sheet</param>
+            <param name="buttons">Buttons displayed in action sheet</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

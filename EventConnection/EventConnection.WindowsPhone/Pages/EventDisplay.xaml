@@ -1,0 +1,104 @@
+﻿<storeApps:VisualStateAwarePage
+    x:Class="EventConnection.Pages.EventDisplay"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:EventConnection.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ratingControl="using:JISoft.RatingControl"
+    xmlns:xaml="using:Tools.Extentions.xaml"
+    mc:Ignorable="d"
+    Background="#ded6bf"
+    xmlns:mvvm="using:Microsoft.Practices.Prism.Mvvm"
+    xmlns:controls="using:EventConnection.Controls"
+    xmlns:storeApps="using:Microsoft.Practices.Prism.StoreApps"
+    mvvm:ViewModelLocator.AutoWireViewModel="true">
+
+    <Grid x:Name="LayoutRoot">
+
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition/>
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="10*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="6*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Image Grid.ColumnSpan="3" Source="../Resources/EventConnection_top.png"></Image>
+        <Grid Grid.Column="1" Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*" />
+                <RowDefinition Height="6*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Border Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" BorderBrush="Black" BorderThickness="2">
+                <Grid Margin="10, 5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Row="0" Style="{ThemeResource GroupHeaderTextBlockStyle}"  Foreground="Black" HorizontalAlignment="Center" Text="{Binding DateDisplay, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" />
+                    <TextBlock Grid.Row="1" Style="{ThemeResource GroupHeaderTextBlockStyle}"  Foreground="Black" HorizontalAlignment="Center" Text="{Binding TimePeriod, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" />
+                </Grid>
+            </Border>
+
+            <ScrollViewer Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" VerticalScrollBarVisibility="Visible" VerticalScrollMode="Enabled" HorizontalScrollBarVisibility="Disabled" HorizontalScrollMode="Disabled">
+                <StackPanel Width="{Binding Path=ActualWidth, ElementName=RTBContainer, Mode=OneWay}">
+                    <TextBlock TextWrapping="Wrap" Style="{ThemeResource GroupHeaderTextBlockStyle}"  Foreground="Black" HorizontalAlignment="Center" Text="{Binding Title, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBlock Style="{ThemeResource GroupHeaderTextBlockStyle}"  Foreground="Black" HorizontalAlignment="Center">Дополнительная информация</TextBlock>
+                    <RichTextBlock TextWrapping="Wrap" Style="{ThemeResource BaseRichTextBlockStyle}"  Foreground="Black" HorizontalAlignment="Left" Width="{Binding Path=ActualWidth, ElementName=RTBContainer, Mode=OneWay}" xaml:HtmlInput.Html="{Binding Brief, UpdateSourceTrigger=PropertyChanged}" >
+                    </RichTextBlock>
+                    <TextBlock Style="{ThemeResource GroupHeaderTextBlockStyle}"  Foreground="Black" HorizontalAlignment="Center">Спикеры</TextBlock>
+                    <ListBox Name="EventListBox" Margin="0" VerticalAlignment="Stretch" Foreground="Black"
+                 ScrollViewer.VerticalScrollMode="Enabled"
+                 ScrollViewer.VerticalScrollBarVisibility="Hidden"
+                 ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                 ScrollViewer.HorizontalScrollMode="Disabled"  SelectionMode="Single" SelectionChanged="OnClick" HorizontalContentAlignment="Stretch" ItemsSource="{Binding Speakers}" >
+                        <ListBox.ItemContainerStyle>
+                            <Style TargetType="ListBoxItem">
+                                <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+                            </Style>
+                        </ListBox.ItemContainerStyle>
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="2*" />
+                                        <ColumnDefinition Width="4*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Image Grid.Column="0" Width="15" Height="15" Source="{Binding Photo}"></Image>
+                                    <TextBlock Grid.Column="2" Text="{Binding Name}"/>
+                                </Grid>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </StackPanel>
+            </ScrollViewer>
+            <ratingControl:Rating Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"   
+                AllowSelectingZero="True" ReadOnly="False"  
+                RatingItemCount="5" Value="{Binding Voting, 
+                        Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Background="Transparent" IsEnabled="{Binding IsNotVoted, 
+                        Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+                <ratingControl:Rating.FilledItemStyle>
+                    <Style TargetType="ratingControl:RatingItem">
+                        <Setter Property="Background" Value="Goldenrod"/>
+                    </Style>
+                </ratingControl:Rating.FilledItemStyle>
+                <ratingControl:Rating.UnfilledItemStyle>
+                    <Style TargetType="ratingControl:RatingItem">
+                        <Setter Property="Background" Value="LightGray"/>
+                    </Style>
+                </ratingControl:Rating.UnfilledItemStyle>
+            </ratingControl:Rating>
+        </Grid>
+        <controls:MenuControl Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" ExpliciteChatLock="False" ExpliciteEventsLock="False" ExpliciteReviewLock="False" />
+    </Grid>
+</storeApps:VisualStateAwarePage>

@@ -1,0 +1,48 @@
+﻿<storeApps:VisualStateAwarePage
+    x:Class="EventConnection.Pages.LoginSocial"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:EventConnection.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="using:Facebook.Client.Controls"
+    mc:Ignorable="d"
+    Background="#ded6bf"
+    xmlns:mvvm="using:Microsoft.Practices.Prism.Mvvm"
+    xmlns:storeApps="using:Microsoft.Practices.Prism.StoreApps"
+    mvvm:ViewModelLocator.AutoWireViewModel="true">
+
+    <Grid x:Name="LayoutRoot">
+
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition/>
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Title Panel -->
+        <ProgressBar Name="LoadBar" IsIndeterminate="True"  Visibility="Collapsed" IsEnabled="False"></ProgressBar>
+        <StackPanel Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock Text="РЕГИСТРАЦИЯ" Style="{ThemeResource HeaderTextBlockStyle}"  Foreground="Black" CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}" HorizontalAlignment="Center"/>
+        </StackPanel>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <!--<Button Grid.Column="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                <Image Source="../Resources/linkedin_icon.png" Width="150" Stretch="Uniform" />
+            </Button>-->
+            <!--TODO: Make style for this element and make linkedin autorisation -->
+            <controls:LoginButton x:ConnectionId='1' Name="LoginButton" Grid.Column="0" Grid.ColumnSpan="2" FetchUserInfo="True"                                                         Permissions="public_profile, email"  />
+        </Grid>
+    </Grid>
+</storeApps:VisualStateAwarePage>
+

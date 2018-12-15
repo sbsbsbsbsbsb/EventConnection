@@ -1,0 +1,11 @@
+D:\tfs\TFS\Interfaces\Interfaces\EventConnection\Core\Core.csproj;neutral
+D:\tfs\TFS\Interfaces\Interfaces\EventConnection\Core\Core.csproj;neutral
+D:\tfs\TFS\Interfaces\Interfaces\EventConnection\EventConnection\EventConnection.WindowsPhone\EventConnection.WindowsPhone.csproj;neutral
+D:\tfs\TFS\Interfaces\Interfaces\EventConnection\Model\Model.csproj;neutral
+D:\tfs\TFS\Interfaces\Interfaces\EventConnection\Model\Model.csproj;neutral
+D:\tfs\TFS\Interfaces\Interfaces\EventConnection\Model\Model.csproj;neutral
+D:\tfs\TFS\Interfaces\Interfaces\EventConnection\Tools\Tools.csproj;neutral
+D:\tfs\TFS\Interfaces\Interfaces\EventConnection\Tools\Tools.csproj;neutral
+D:\tfs\TFS\Interfaces\Interfaces\EventConnection\Tools\Tools.csproj;neutral
+D:\tfs\TFS\Interfaces\Interfaces\EventConnection\Tools\Tools.csproj;neutral
+D:\tfs\TFS\Interfaces\Interfaces\EventConnection\ViewModels\ViewModels.csproj;neutral

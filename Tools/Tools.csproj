@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>12.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0E271758-22CE-4043-8003-72D1003B12F4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Tools</RootNamespace>
+    <AssemblyName>Tools</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkProfile>Profile32</TargetFrameworkProfile>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <TargetPlatform Include="WindowsPhoneApp, Version=8.1" />
+    <TargetPlatform Include="Windows, Version=8.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Attributes\DisplayAttribute.cs" />
+    <Compile Include="Attributes\PeriodAttribute.cs" />
+    <Compile Include="Extentions\DateTimeExtentions.cs" />
+    <Compile Include="Extentions\DictionaryExtensions.cs" />
+    <Compile Include="Extentions\EnumExtentions.cs" />
+    <Compile Include="Extentions\ProgressBarExtention.cs" />
+    <Compile Include="Extentions\xaml\HtmlInput.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResourcesSupport\AppResources.cs" />
+    <Compile Include="ResourcesSupport\ValidationLocalizationFactory.cs" />
+    <Compile Include="ResourcesSupport\ValidationLocalizationService.cs" />
+    <Compile Include="ValidationEngine\Converters\IMessageCollectionToStringCollectionConverter.cs" />
+    <Compile Include="ValidationEngine\Converters\ValidationCollectionToColorBrush.cs" />
+    <Compile Include="ValidationEngine\Converters\ValidationCollectionToSingleStringConverter.cs" />
+    <Compile Include="ValidationEngine\Models\IValidatable.cs" />
+    <Compile Include="ValidationEngine\Models\IValidationLocalizationService.cs" />
+    <Compile Include="ValidationEngine\Models\IValidationMessage.cs" />
+    <Compile Include="ValidationEngine\Models\ValidatableBase.cs" />
+    <Compile Include="ValidationEngine\Models\ValidationChangedEventArgs.cs" />
+    <Compile Include="ValidationEngine\Models\ValidationErrorMessage.cs" />
+    <Compile Include="ValidationEngine\Models\ValidationRules\EmailAttribute.cs" />
+    <Compile Include="ValidationEngine\Models\ValidationRules\IValidationRule.cs" />
+    <Compile Include="ValidationEngine\Models\ValidationRules\PhoneAttribute.cs" />
+    <Compile Include="ValidationEngine\Models\ValidationRules\ValidateNumberHasMaximumValueAttribute.cs" />
+    <Compile Include="ValidationEngine\Models\ValidationRules\ValidateNumberHasMinimumValueAttribute.cs" />
+    <Compile Include="ValidationEngine\Models\ValidationRules\ValidateNumberInRangeAttribute.cs" />
+    <Compile Include="ValidationEngine\Models\ValidationRules\ValidateNumberIsGreaterThanAttribute.cs" />
+    <Compile Include="ValidationEngine\Models\ValidationRules\ValidateNumberIsLessThanAttribute.cs" />
+    <Compile Include="ValidationEngine\Models\ValidationRules\ValidateObjectHasValueAttribute.cs" />
+    <Compile Include="ValidationEngine\Models\ValidationRules\ValidateStringIsGreaterThanAttribute.cs" />
+    <Compile Include="ValidationEngine\Models\ValidationRules\ValidateStringIsLessThanAttribute.cs" />
+    <Compile Include="ValidationEngine\Models\ValidationRules\ValidateWithCustomHandlerAttribute.cs" />
+    <Compile Include="ValidationEngine\Models\ValidationRules\ValidationAttribute.cs" />
+    <Compile Include="ValidationEngine\Models\ValidationRules\ValidationCustomHandlerDelegate.cs" />
+    <Compile Include="ValidationEngine\Models\ValidationRules\ValidationNumberDataTypes.cs" />
+    <Compile Include="ValidationEngine\Models\ValidationWarningMessage.cs" />
+    <Compile Include="ValidationEngine\ViewModel\ViewModel.cs" />
+    <Compile Include="Extentions\HttpMethodExtention.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="HtmlAgilityPack, Version=1.4.9.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.4.9\lib\portable-net45+netcore45+wpa81+wp8+MonoAndroid+MonoTouch\HtmlAgilityPack.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="JetBrains.Annotations.PCL328, Version=10.0.0.0, Culture=neutral, PublicKeyToken=1010a0d8d6380325, processorArchitecture=MSIL">
+      <HintPath>..\packages\JetBrains.Annotations.10.0.0\lib\portable-net4+sl5+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1\JetBrains.Annotations.PCL328.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
